@@ -8,7 +8,7 @@ if (isset($_POST['update'])) {
     $mobile = $_POST["mobile"];
     $email = $_POST["email"];
 
-    $result = mysqli_connect($mysqli, "UPDATE users SET name = '$name', email = '$email', mobile = '$mobile' WHERE id = '$id'");
+    $result = mysqli_query($mysqli, "UPDATE users SET name = '$name', email = '$email', mobile = '$mobile' WHERE id = '$id'");
 
     header("Location: index.php");
 }
